@@ -20,6 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        //测试本地androidstudio推送
     </application>
 
 </manifest>
