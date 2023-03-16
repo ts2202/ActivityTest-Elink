@@ -1,0 +1,26 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "ActivityTest"
+include ':app'
+include ':myprogressbar'
+include ':mynotification'
+include ':mytoolbar and wallpaperset'
+include ':mydeviceinfo'
+include ':test'
+include ':simtest'
+include ':headsetChange'
+include ':myservice'
+include ':usbtospiangledome'
+include ':key_f12test'

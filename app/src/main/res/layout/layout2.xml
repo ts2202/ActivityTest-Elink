@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    //android:inputType="phone" 输入类型为数字
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="请输入用户名"
+        android:textColorHint="@color/pink"
+        android:inputType="text"
+        android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+        android:drawablePadding="15dp"
+        android:padding="12dp"/>
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取用户名"/>
+    <ImageView
+        android:src="@drawable/tutu"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="center"
+        />
+    //maxHeight、maxWidth配合adjustViewBounds实现等比缩放；
+    //centerinside当图片大于imageview则实现等比缩放，同fixcenter，当图片小于imageview则保持原图大小显示在中间
+    //center当图片小于imageview则保持原图大小显示在中间,大于时，则取原图局部画面显示在中间
+    <ImageView
+        android:src="@drawable/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxHeight="200dp"
+        android:maxWidth="200dp"
+        android:adjustViewBounds="true"
+        />
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--
+    <Button
+        android:id="@+id/button_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button 2"
+         />
+-->
+<!--
+    layout_margin指的是当前图层与外部图层的距离，而padding
+    指的是当前图层与内部图层的距离。
+    android:layout_marginTop="5dp"，该属性的作用是让当前视图与上方间隔一段距离。同理，
+    android:layout_marginLeft让当前视图与左边间隔一段距离，android:layout_marginRight让当前视图
+    与右边间隔一段距离，android:layout_marginBottom让当前视图与下方间隔一段距离。如果上下左右
+    都间隔同样的距离，还能使用android:layout_margin一次性设置四周的间距.
+    layout_gravity设定了当前视图相对于上级视图的对齐方式，而gravity设定了下级视图相对于当前视图的对齐方式；
+    前者决定了当前视图的位置，而后者决定了下级视图的位置。
+    一旦设置了layout_weight属性值，便要求layout_width填0dp或者layout_height填0dp。如果layout_width填
+    0dp，则layout_weight表示水平方向的权重，下级视图会从左往右分割线性布局；如果layout_height填0dp，则layout_weight表示垂直方向的权重，下级视图会从上往下分割线性布局。
+    Button标签补充textAllCaps属性，该属性默认为true表示全部转为大写，如果设置为false则表示不转为大写。
+    -->
+    <Button
+        android:id="@+id/button_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button1"
+        android:textSize="30dp"
+        android:textAllCaps="false"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/pink"
+        android:shadowColor="@color/yellow"
+        android:shadowRadius="5.0"
+        android:shadowDx="10.0"
+        android:shadowDy="10.0"
+        android:text="@string/second"
+        android:textColor="@color/pink"
+        android:textSize="30sp" />
+
+    <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/button_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="禁用按钮"
+        android:textSize="30dp"
+        android:enabled="false"
+        />
+
+    <Button
+        android:id="@+id/button_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_weight="1"
+        android:text="Button3"
+        android:textSize="30dp"
+        android:textAllCaps="false"
+        />
+</LinearLayout>
+
+</LinearLayout>

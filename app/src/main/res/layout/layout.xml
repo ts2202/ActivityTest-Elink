@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_icon_back"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_icon_home"
+        android:clickable="true"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_icon_close"
+        android:clickable="true"/>
+    </LinearLayout>
+
+    <!--自定义的TextView,已获取焦点,与设置android:clickable="true"同效 android:focusable="true":是否可以获取焦点  android:focusableInTouchMode="true":在触摸模式下是否可以聚焦 -->
+    <com.enjoy.mytextview.MyTextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="跑马灯跑马灯你好你好你和你和你还能你你你你你你那你你那你你你好你好你和你和你还能你你你你你你那你你那你你你好你好你和你和你还能你你你你你你那你你那你你你好你好你和你和你还能你你你你你你那你你那你你你好你好你和你和你还能你你你你你你那你你那你你"
+        android:textColor="@color/black"
+        android:shadowRadius="5.0"
+        android:shadowColor="@color/pink"
+        android:textStyle="italic"
+        android:scaleX="2.0"
+        />
+    <!--android:ellipsize="marquee" 跑马灯显示文本  android:marqueeRepeatLimit="marquee_forever" 字幕动画重复的次数-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="跑马灯跑马灯你好你好你和你和你还能你你你你你你那你你那你你你好你好你和你和你还能你你你你你你那你你那你你你好你好你和你和你还能你你你你你你那你你那你你你好你好你和你和你还能你你你你你你那你你那你你你好你好你和你和你还能你你你你你你那你你那你你"
+        android:textColor="@color/black"
+        android:shadowRadius="5.0"
+        android:shadowColor="@color/pink"
+        android:textStyle="italic"
+        android:scaleX="2.0"
+        >
+        //使TextView获取焦点
+        <requestFocus/>
+    </TextView>
+
+    /*android:backgroundTint 背景色设置   android:foreground 前景色*/
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@drawable/btn_select"
+        android:backgroundTint="@drawable/btn_color_selector"
+        android:text="按钮"
+        android:textStyle="bold"
+        android:textColor="@color/pink"
+        android:onClick="leoClick"
+        />
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThirdActivity"
+    android:orientation="vertical">
+    <!--不管图片有多大抑或有多小，图像视图都会自动缩放图片，使之刚好够着ImageView的边界，并且缩放后的图片保持原始的宽高比例，
+    看起来图片很完美地占据视图中央缩放类型在XML文件中通过属性android:scaleType定义，即使图像视图未明确指定该属性，
+    系统也会默认其值为fitCenter，表示让图像缩放后居中显示-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <ImageView
+        android:id="@+id/iv_scale"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:src="@drawable/icon"
+        android:scaleType="fitCenter"
+        />
+    <ImageView
+        android:id="@+id/iv_scale2"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:src="@drawable/icon2" />
+
+    <ImageView
+        android:id="@+id/iv_scale3"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        />
+            <ImageButton
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/background"
+                android:scaleType="fitXY"
+                >
+            </ImageButton>
+            //既有文字又有图标的Button标签
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_launcher2"
+                android:drawablePadding="5dp"
+                android:text="Button"
+                android:textSize="30dp"
+                android:textAllCaps="false"
+                />
+        </LinearLayout>
+</ScrollView>
+</LinearLayout>

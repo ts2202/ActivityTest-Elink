@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/dp_10"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <Button
+            android:id="@+id/btn_open"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="打开CH341X USB TO SPI设备"
+            android:textAllCaps="false"
+
+            />
+        <TextView
+            android:id="@+id/tv_chipversion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="CH341UsbToSpi芯片版本: "
+            android:layout_marginStart="@dimen/dp_10"
+            />
+        <Button
+            android:id="@+id/btn_factory_dfefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="初始化AngleSensor为出厂默认设置"
+            android:textAllCaps="false"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="@drawable/bg_ll"
+            >
+
+            <EditText
+                android:id="@+id/et_spi_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="SPI发送的值"
+                android:layout_marginStart="@dimen/dp_10"
+                android:text="0000"
+                />
+            <Button
+                android:id="@+id/btn_spi_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="SPI读写"
+                android:textAllCaps="false"
+                android:layout_marginStart="@dimen/dp_10"
+                />
+
+            <TextView
+                android:id="@+id/tv_spi_receive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="SPI收到的值"
+                android:layout_marginStart="@dimen/dp_10"
+                />
+                
+            <Button
+                android:id="@+id/btn_get_angle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="获取角度值"
+                android:textAllCaps="false"
+                android:layout_marginStart="@dimen/dp_10"
+                />
+                
+            <TextView
+                android:id="@+id/tv_angle_raw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="寄存器数值"
+                android:layout_marginStart="@dimen/dp_10"
+                />
+            <TextView
+                android:id="@+id/tv_angle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="角度值"
+                android:layout_marginStart="@dimen/dp_10"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:key="my_device_info_pref_screen"
+        android:title="关于本机">
+    <PreferenceCategory
+        android:title="设备标识符"
+        android:key="thirdC">
+    <!--<SwitchPreferenceCompat
+        app:key="notifications"
+        app:title="Enable message notifications" />
+
+    <Preference
+        app:key="feedback"
+        app:summary="Report technical issues or suggest new features"
+        app:title="Send feedback" />
+
+    <SwitchPreference
+        app:key="SwitchPreference"
+        app:title="SwitchPreference" />
+
+    <CheckBoxPreference
+        android:key="CheckBoxPreference"
+        app:title="CheckBoxPreference" />-->
+        <Preference
+            android:key="build_number"
+            android:order="0"
+            android:title="版本号"
+            android:summary="release-key——20222"
+            app:enableCopying="true"
+            />
+        <Preference
+            android:key="elink_device_info2"
+            android:order="2"
+            android:title="硬件信息"
+            android:summary="显示屏，重力感应"
+            />
+   </PreferenceCategory>
+</PreferenceScreen>

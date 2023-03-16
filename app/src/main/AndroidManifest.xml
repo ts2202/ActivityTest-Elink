@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.activitytest">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ic_launcher2"
+        android:roundIcon="@drawable/ic_launcher2"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ActivityTest"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+           <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".ShareReadActivity"
+            android:exported="true"
+            android:label="This is ShareReadActivity" />
+        <activity
+            android:name=".ShareWriteActivity"
+            android:exported="true"
+            android:label="This is ShareWriteActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".DatePickerActivity"
+            android:exported="false"
+            android:label="This is DatePickerActivity" />
+        <activity
+            android:name=".EditFocusActivity"
+            android:exported="false"
+            android:label="This is EditFocusActivity" />
+        <activity
+            android:name=".RadioHorizontalActivity"
+            android:exported="true"
+            android:label="This is RadioActivity">
+
+            <!--
+                <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".Intent3Activity"
+            android:exported="false"
+            android:label="This is IntentReceiveActivity" />
+        <activity
+            android:name=".Intent2Activity"
+            android:exported="true"
+            android:label="This is IntentSendActivity">
+
+            <!--
+            元数据是一种描述其他数据的数据，它相当于描述固定活动的参数信息
+            元数据不单单能传递简单的字符串参数，还能传送更复杂的资源数据
+            元数据可实现了类似支付宝的快捷方式，给应用页面注册快捷方式
+            -->
+            <meta-data
+                android:name="weather"
+                android:value="@string/weather_str" />
+            <!-- MainActivity所在的activity节点指定快捷方式。在桌面上长按应用图标，就会弹出@xml/shortcuts所描述的快捷菜单 -->
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".ThirdActivity"
+            android:label="This is ThirdActivity" />
+        <!--
+         <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.sssssss" />
+            </intent-filter>
+        </service>
+        
+        <receiver android:name="com.example.activitytest.MyReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.mmmmm" />
+            </intent-filter>
+            
+        </receiver>
+        -->
+        <activity
+            android:name=".SecondActivity"
+            android:label="This is SecondActivity" />
+        <activity
+            android:name=".FirstActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
